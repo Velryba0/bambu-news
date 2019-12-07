@@ -34,9 +34,6 @@ const SignIn = () => {
 		// console.log(email, password)
     }    
 
-    const logOut = () => {
-       auth.signOut();
-    }
 
     return (
         <div className='sign-in' >
@@ -49,7 +46,6 @@ const SignIn = () => {
                     <div className='buttons'>
                     <CustomButton type='submit' > Inicar Sesión </CustomButton>
                     <CustomButton type='button' onClick={signInWithGoogle} isGoogleSignIn >Inicar Sesión con Google</CustomButton>
-                    <CustomButton type='button' onClick={logOut} >Salir</CustomButton>
                     </div>
                 </form>
             </div>

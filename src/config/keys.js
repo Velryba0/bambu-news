@@ -9,4 +9,8 @@ const config = {
     measurementId: "G-YW5MTY7VH4"
 }
 
+export const keyApiNews = {
+    key: '925bfc1f503b4fa7b9fe2922d9eb9c69'
+}
+
 export default config;
