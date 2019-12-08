@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
-import { signInWithGoogle, auth, createUserProfileDocument } from './firebase/firebase.utils';
+import { auth, createUserProfileDocument } from './firebase/firebase.utils';
 
 import SignInAndSignUpPage from './views/sign-in-and-sign-out/sign-in-and-sign-up.component';
 import SearchNews from './views/search-news/search-news.component';
+import Background from './components/background/background.component';
 
 
 
@@ -20,7 +21,7 @@ const Routes = () => {
 	
 	return (
 		<>
-
+		<Background/>
 		<Switch>
 			<Route exact path = '/'
 			render = {
@@ -28,7 +29,7 @@ const Routes = () => {
 			} />
 			<Route path = '/news'
 			render = {
-				() => currentUser == null ? ( <Redirect to = '/'/>) : ( <SearchNews/> )
+				() => currentUser == null ? ( <Redirect to = '/'/>) : ( <SearchNews /> )
 			}/>
 		</Switch>
 
