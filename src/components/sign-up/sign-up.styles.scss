@@ -4,10 +4,35 @@
 	display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    & span{
-        color: white;
-        font-weight: 100;
-    }
+	align-items: center;
+	background: url('../../images/papaernews.jpg') no-repeat;
+	background-size: cover;
+	border-radius: 60px;
+	margin-left: 25px;
+	color: #469a9ae8;
+	& h2 {
+		position: relative;
+		bottom: 3%;
+		font-size: 2.1em;
+	}
+    & span {
+		position: relative;
+		bottom: 6%;
+		font-size: 1.2em;
+		text-align: center;
+		& p{
+			position: relative;
+			bottom: 15%;
+		}
+	}
+	& form {
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		width: 70%;
+		& button {
+			transform: translateY(-20px);
+		}
+	}
 }
 
