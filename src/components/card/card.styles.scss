@@ -1,0 +1,60 @@
+section div {
+    position: relative;
+    left: 5%;
+    width: 250px;
+    height: 500px;
+    display: inline-flex;
+    border-radius: 21px;
+    margin: 21px;
+    color: white;
+    font-family: 'Baumans', cursive;
+    font-size: .8em;
+    flex-direction: column;
+    padding: 21px;
+    text-align: center;
+    transition: .4s ease-in-out;
+	&:hover {
+        position: relative;
+        left: 5%;
+		transform: scale(1.1);
+		background: url('../../images/papaernews.jpg') no-repeat !important;
+		background-size: cover !important;
+		transition: .3s ease-in-out;
+		& h1 {
+			transform: scale(0.01);
+			transition: .3s ease-in-out;
+		}
+		& p {
+			transform: scale(1);
+			transition: .3s ease-in-out;
+		}
+	}
+    & h1 {
+		position: relative;
+		top: 33%;
+        margin: 0;
+        word-spacing: 3px;
+		line-height: 28px;
+		transition: transform .3s ease-in-out;
+        & span {
+			// background: #6f6126;
+			background: #195b55; 
+        }
+    }
+    & p {
+        transform: translateY(50px) scale(0.01);
+        line-height: 18px;
+        color: #144649;
+        text-align: center;
+        line-height: 21px;
+        background: white;
+        opacity: .9;
+        border-radius: 15px;
+        padding: 9px;
+		font-size: 1.05em;
+		transition: transform .3s ease-in-out;
+    }
+
+}
+
+

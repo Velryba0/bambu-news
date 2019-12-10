@@ -4,7 +4,6 @@ import { auth, createUserProfileDocument } from './firebase/firebase.utils';
 
 import SignInAndSignUpPage from './views/sign-in-and-sign-out/sign-in-and-sign-up.component';
 import SearchNews from './views/search-news/search-news.component';
-import Background from './components/background/background.component';
 
 
 
@@ -21,7 +20,6 @@ const Routes = () => {
 	
 	return (
 		<>
-		<Background/>
 		<Switch>
 			<Route exact path = '/'
 			render = {

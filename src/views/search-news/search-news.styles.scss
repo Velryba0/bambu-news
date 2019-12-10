@@ -1,0 +1,26 @@
+section {
+    position: absolute;
+    top: 0%;
+    color: white;
+    font-family: 'Baumans', cursive;
+    & h1 {
+        font-size: 1.7em;
+        text-align: center;
+    }
+    & form {
+        display: flex;
+        justify-content: center;
+        & button {
+            margin: 15px;
+            color: white;
+        } 
+        & select {
+            height: 36px;
+            margin: 15px;
+            border-radius: 9px;
+            font-family: 'Baumans', cursive;
+            font-size: 1.3em;
+            color: rgb(189, 189, 189);
+        }
+    } 
+}
