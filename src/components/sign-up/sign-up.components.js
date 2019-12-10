@@ -13,29 +13,22 @@ const SignUp = () => {
     const [password, setPassword] = useState('');
 	const [confirmPassword, setConfirmPassword] = useState('');
 	
-	// const [newUser, setNewUser] = useState({
-	// 	displayName: '',
-	// 	email: '',
-	// 	password: '',
-	// 	confirmPassword: ''
-	// })
 
     const handleSubmit = async event => {
 		event.preventDefault();
-		if(password != confirmPassword) {
+		if(password !== confirmPassword) {
 			alert('La contraseña no coincide');
 			return;
 		}
 
 		try {
 			const { user } = await auth.createUserWithEmailAndPassword(email, password);
-			console.log(displayName)
+			// console.log(displayName)
             await createUserProfileDocument(user, {displayName} );
             
             await user.updateProfile({
                 displayName
             })
-			console.log({displayName})
 
 			setDisplayName('')
 			setEmail('')
@@ -49,13 +42,13 @@ const SignUp = () => {
 
 	const handleChange = event => {
 		const { name, value } = event.target;
-		console.log(name)
+		// console.log(name)
 
-		name == 'displayName' ? 
+		name === 'displayName' ? 
 		setDisplayName(value) : 
-		name == 'email' ? 
+		name === 'email' ? 
 		setEmail(value) :
-		name == 'password' ? 
+		name === 'password' ? 
 		setPassword(value) : 
 		setConfirmPassword(value);
 		
