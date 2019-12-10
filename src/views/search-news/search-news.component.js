@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 
 import CustomButton from '../../components/custom-button/custom-button.component';
 import FormSearchNews from '../../components/form-search-news/form-search-news.component';
+import Card from '../../components/card/card.component';
 
-import { auth } from '../../firebase/firebase.utils';
 import useAsyncHook from '../../hooks/useAsyncHook';
 
 
@@ -21,7 +21,6 @@ const SearchNews = () => {
 	const [result, loading] = useAsyncHook(search);
 
 	console.log(result)
-	console.log(loading)
 
 	const countryChange = (e) => {
 		let changeCountry = document.getElementById('country');
@@ -43,17 +42,12 @@ const SearchNews = () => {
 			cat: category 
 		})
 	}
-
-	const logOut = () => {
-		auth.signOut();
-	 }
     
     return (
         <section>
 			<h1>Busca tus noticias por país y categoría</h1>
 			<FormSearchNews searchData={searchData} countryChange={countryChange} catChange={catChange}/>
-            <CustomButton type='button' onClick={logOut} >Salir</CustomButton>
-	{result.map((x, i) => (<li key={i} >{x.title}</li>))}
+			{result.map((x, index) => (<Card key={index} newsTitle={x.title} newsContent={x.content} newsImage={x.urlToImage} newsDate={x.publishedAt} newsDescription={x.description} index={index}/>))}
         </section>
     )
 }
