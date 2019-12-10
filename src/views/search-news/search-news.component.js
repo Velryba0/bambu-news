@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 
-import CustomButton from '../../components/custom-button/custom-button.component';
 import FormSearchNews from '../../components/form-search-news/form-search-news.component';
 import Card from '../../components/card/card.component';
 
@@ -18,7 +17,7 @@ const SearchNews = () => {
 		c: country,
 		cat: category 
 	});
-	const [result, loading] = useAsyncHook(search);
+	const [result] = useAsyncHook(search);
 
 	console.log(result)
 

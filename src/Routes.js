@@ -14,7 +14,7 @@ const Routes = () => {
         auth.onAuthStateChanged( async userAuth => {       
             createUserProfileDocument(userAuth);
 			setCurrentUser(userAuth);
-			console.log(currentUser)
+			// console.log(currentUser)
         })
 	})
 	

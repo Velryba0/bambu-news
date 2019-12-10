@@ -18,7 +18,7 @@ const SignIn = () => {
 
         try {
             await auth.signInWithEmailAndPassword(email, password);
-            console.log(email, password)
+            // console.log(email, password)
 	
         } catch (error) {
             console.log(error)
@@ -28,7 +28,7 @@ const SignIn = () => {
 
     const handleChange = event => {
         const { value, name } = event.target;
-        name == 'email' ? 
+        name === 'email' ? 
             setEmail(value) :
             setPassword(value);
 		// console.log(email, password)
